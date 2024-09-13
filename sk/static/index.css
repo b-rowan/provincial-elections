@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  font-weight: 700;
+}
+
+body {
+  background: #68BBE3;
+  margin: auto;
+}
+.striped {
+  -webkit-mask-image: repeating-linear-gradient( 45deg, #fff, #fff 1px, #87CEEB 1px, #87CEEB 2px);
+  mask-image: repeating-linear-gradient( 45deg, #fff, #fff 1px, #87CEEB 1px, #87CEEB 2px);
+}
