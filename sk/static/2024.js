@@ -2,7 +2,7 @@ const map = document.getElementById("map");
 const rootStyle = getComputedStyle(document.documentElement);
 const secondaryColor = rootStyle.getPropertyValue('--bs-secondary').trim();
 const parties = {
-    "???": {"symbol": "???", "name": "Unknown", "color": secondaryColor},
+    "TBD": {"symbol": "TBD", "name": "Unknown", "color": secondaryColor},
     "SAS": {"symbol": "SAS", "name": "Saskatchewan Party", "color": "#00593E"}
     "UNI": {"symbol": "UNI", "name": "Saskatchewan United Party", "color": "#055284"}
     "NDP": {"symbol": "NDP", "name": "New Democratic Party", "color": "#FF9800"},
