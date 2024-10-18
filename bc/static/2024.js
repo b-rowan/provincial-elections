@@ -2,7 +2,7 @@ const map = document.getElementById("map");
 const rootStyle = getComputedStyle(document.documentElement);
 const secondaryColor = rootStyle.getPropertyValue('--bs-secondary').trim();
 const parties = {
-    "???": {"symbol": "???", "name": "Unknown", "color": secondaryColor},
+    "TBD": {"symbol": "TBD", "name": "Unknown", "color": secondaryColor},
     "GRN": {"symbol": "GRN", "name": "Green Party", "color": "#008542"},
     "NDP": {"symbol": "NDP", "name": "New Democratic Party", "color": "#FF6633"},
     "CON": {"symbol": "CON", "name": "Conservative Party", "color": "#004AAD"}
@@ -105,7 +105,7 @@ function getTopPartyByDistrict(parsedData) {
     parsedData.forEach(entry => {
         const { district, party, votes } = entry;
         const voteCount = parseInt(votes, 10); // Convert votes to a number
-        const abbreviatedParty = partyMapping[party] || '???';
+        const abbreviatedParty = partyMapping[party] || 'TBD';
         if (!topParties[district] || voteCount > topParties[district].votes) {
             topParties[district] = { party: abbreviatedParty, votes: voteCount };
         }
