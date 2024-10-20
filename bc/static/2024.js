@@ -112,7 +112,7 @@ function getTopPartyByDistrict(parsedData) {
 
     const partyMapping = {
         'Conservative Party': 'CON',
-        'Green Party': 'GRN',
+        'BC Green Party': 'GRN',
         'BC NDP': 'NDP',
     };
 
