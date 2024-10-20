@@ -11,7 +11,19 @@ var regions = {'ABM': {'name': 'Abbotsford-Mission', 'parties': {}}, 'ABS': {'na
 
 //const electoralCsvUrl = 'https://electionsbcenr.blob.core.windows.net/electionsbcenr/GE-2024-10-19_Candidate.csv';
 
-const electoralCsvUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://electionsbcenr.blob.core.windows.net/electionsbcenr/GE-2024-10-19_Candidate.csv') + "?nocache+1";
+const electoralCsvUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://electionsbcenr.blob.core.windows.net/electionsbcenr/GE-2024-10-19_Candidate.csv') + "?" + makeid(10);
+
+function makeid(length) {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < length) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+}
 
 let locations = [];
 document.addEventListener("DOMContentLoaded", () => {
