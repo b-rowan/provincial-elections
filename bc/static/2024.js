@@ -11,7 +11,7 @@ var regions = {'ABM': {'name': 'Abbotsford-Mission', 'parties': {}}, 'ABS': {'na
 
 //const electoralCsvUrl = 'https://electionsbcenr.blob.core.windows.net/electionsbcenr/GE-2024-10-19_Candidate.csv';
 
-const electoralCsvUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://electionsbcenr.blob.core.windows.net/electionsbcenr/GE-2024-10-19_Candidate.csv') + "?" + makeid(10);
+const electoralCsvUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://electionsbcenr.blob.core.windows.net/electionsbcenr/GE-2024-10-19_Candidate.csv');
 
 function makeid(length) {
     let result = '';
@@ -149,10 +149,10 @@ function getTopPartyByDistrict(parsedData) {
     return result;
 }
 function startFetchingElectoralData(csvUrl) {
-    fetchElectoralData(csvUrl);
+    fetchElectoralData(csvUrl  + "?" + makeid(10));
     setInterval(() => {
-        fetchElectoralData(csvUrl);
-    }, 180000);
+        fetchElectoralData(csvUrl  + "?" + makeid(10));
+    }, 30000);
 }
 function updateRegionInfo(e) {
     const region = e.target.id.slice(0, 3);
