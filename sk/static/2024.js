@@ -92,15 +92,12 @@ function parseElectoralData(data) {
         regionName = regionData.englishName;
         regionCode = regionConversion[regionName];
         if (!regionCode) {
-            console.log(regionName);
             continue
         }
         for (const pidx in regionData.parties) {
             try {
                 partyData = regionData.parties[pidx];
-                console.log(partyData)
                 partyName = partyConversion[partyData.partyCode];
-                console.log(partyName)
                 regions[regionCode].parties[partyName] = {"name": partyName, "candidate": `${partyData.firstName} ${partyData.lastName}`, "votes": partyData.votes}
                 result.push({"district": regionCode, "party": partyName, "votes": partyData.votes})
             } catch (error) {
