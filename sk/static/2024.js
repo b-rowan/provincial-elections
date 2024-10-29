@@ -141,7 +141,7 @@ function startFetchingElectoralData(url) {
     fetchElectoralData(url);
     setInterval(() => {
         fetchElectoralData(url);
-    }, 30000);
+    }, 10000);
 }
 function updateRegionInfo(e) {
     const region = e.target.id.slice(0, 3);
