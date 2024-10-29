@@ -8,7 +8,11 @@ const parties = {
     "NDP": {"symbol": "NDP", "name": "New Democratic Party", "color": "#FF9800"},
     "BUF": {"symbol": "BUF", "name": "Buffalo Party", "color": "#FDCC04"}
 }
-var regions = {'ATH': {'name': 'Athabasca', 'parties': {}}, 'BAT': {'name': 'Batoche', 'parties': {}}, 'CAN': {'name': 'Cannington', 'parties': {}}, 'CNP': {'name': 'Canora-Pelly', 'parties': {}}, 'CRV': {'name': 'Carrot River Valley', 'parties': {}}, 'CUB': {'name': 'Cumberland', 'parties': {}}, 'CUT': {'name': 'Cut Knife-Turtleford', 'parties': {}}, 'CYP': {'name': 'Cypress Hills', 'parties': {}}, 'DAR': {'name': 'Dakota-Arm River', 'parties': {}}, 'EBM': {'name': 'Estevan-Big Muddy', 'parties': {}}, 'HUW': {'name': 'Humboldt-Watrous', 'parties': {}}, 'KEW': {'name': 'Kelvington-Wadena', 'parties': {}}, 'KIB': {'name': 'Kindersley-Biggar', 'parties': {}}, 'LAT': {'name': 'Last Mountain-Touchwood', 'parties': {}}, 'LLD': {'name': 'Lloydminster', 'parties': {}}, 'LUM': {'name': 'Lumsden-Morse', 'parties': {}}, 'MAB': {'name': 'Martensville-Blairmore', 'parties': {}}, 'MEA': {'name': 'Meadow Lake', 'parties': {}}, 'MEL': {'name': 'Melfort', 'parties': {}}, 'MES': {'name': 'Melville-Saltcoats', 'parties': {}}, 'MJN': {'name': 'Moose Jaw North', 'parties': {}}, 'MJW': {'name': 'Moose Jaw Wakamow', 'parties': {}}, 'MOM': {'name': 'Moosomin-Montmartre', 'parties': {}}, 'PAC': {'name': 'Prince Albert Carlton', 'parties': {}}, 'PAN': {'name': 'Prince Albert Northcote', 'parties': {}}, 'RCP': {'name': 'Regina Coronation Park', 'parties': {}}, 'RDP': {'name': 'Regina Douglas Park', 'parties': {}}, 'REC': {'name': 'Regina Elphinstone-Centre', 'parties': {}}, 'RLK': {'name': 'Regina Lakeview', 'parties': {}}, 'RMR': {'name': 'Regina Mount Royal', 'parties': {}}, 'RNE': {'name': 'Regina Northeast', 'parties': {}}, 'RPQ': {'name': 'Regina Pasqua', 'parties': {}}, 'RRD': {'name': 'Regina Rochdale', 'parties': {}}, 'RSA': {'name': 'Regina South Albert', 'parties': {}}, 'RUN': {'name': 'Regina University', 'parties': {}}, 'RWA': {'name': 'Regina Walsh Acres', 'parties': {}}, 'RWP': {'name': 'Regina Wascana Plains', 'parties': {}}, 'RZD': {'name': 'Rosetown-Delisle', 'parties': {}}, 'SAR': {'name': 'Saskatchewan Rivers', 'parties': {}}, 'SCE': {'name': 'Saskatoon Centre', 'parties': {}}, 'SCM': {'name': 'Saskatoon Chief Mistawasis', 'parties': {}}, 'SCW': {'name': 'Saskatoon Churchill-Wildwood', 'parties': {}}, 'SEA': {'name': 'Saskatoon Eastview', 'parties': {}}, 'SFA': {'name': 'Saskatoon Fairview', 'parties': {}}, 'SME': {'name': 'Saskatoon Meewasin', 'parties': {}}, 'SNU': {'name': 'Saskatoon Nutana', 'parties': {}}, 'SRD': {'name': 'Saskatoon Riversdale', 'parties': {}}, 'SSI': {'name': 'Saskatoon Silverspring', 'parties': {}}, 'SSO': {'name': 'Saskatoon Southeast', 'parties': {}}, 'SST': {'name': 'Saskatoon Stonebridge', 'parties': {}}, 'SUS': {'name': 'Saskatoon University-Sutherland', 'parties': {}}, 'SWE': {'name': 'Saskatoon Westview', 'parties': {}}, 'SWI': {'name': 'Saskatoon Willowgrove', 'parties': {}}, 'SWT': {'name': 'Swift Current', 'parties': {}}, 'TBF': {'name': 'The Battlefords', 'parties': {}}, 'WAR': {'name': 'Warman', 'parties': {}}, 'WBG': {'name': 'Weyburn-Bengough', 'parties': {}}, 'WCQ': {'name': "White City-Qu'Appelle", 'parties': {}}, 'WOR': {'name': 'Wood River', 'parties': {}}, 'YRK': {'name': 'Yorkton', 'parties': {}}, 'RZS': {'name': 'Rosthern-Shellbrook', 'parties': {}}}
+var regions = {'ATH': {'name': 'Athabasca', 'parties': {}}, 'BAT': {'name': 'Batoche', 'parties': {}}, 'CAN': {'name': 'Cannington', 'parties': {}}, 'CNP': {'name': 'Canora-Pelly', 'parties': {}}, 'CRV': {'name': 'Carrot River Valley', 'parties': {}}, 'CUB': {'name': 'Cumberland', 'parties': {}}, 'CUT': {'name': 'Cut Knife-Turtleford', 'parties': {}}, 'CYP': {'name': 'Cypress Hills', 'parties': {}}, 'DAR': {'name': 'Dakota-Arm River', 'parties': {}}, 'EBM': {'name': 'Estevan-Big Muddy', 'parties': {}}, 'HUW': {'name': 'Humboldt-Watrous', 'parties': {}}, 'KEW': {'name': 'Kelvington-Wadena', 'parties': {}}, 'KIB': {'name': 'Kindersley-Biggar', 'parties': {}}, 'LAT': {'name': 'Last Mountain-Touchwood', 'parties': {}}, 'LLD': {'name': 'Lloydminster', 'parties': {}}, 'LUM': {'name': 'Lumsden-Morse', 'parties': {}}, 'MAB': {'name': 'Martensville-Blairmore', 'parties': {}}, 'MEA': {'name': 'Meadow Lake', 'parties': {}}, 'MEL': {'name': 'Melfort', 'parties': {}}, 'MES': {'name': 'Melville-Saltcoats', 'parties': {}}, 'MJN': {'name': 'Moose Jaw North', 'parties': {}}, 'MJW': {'name': 'Moose Jaw Wakamow', 'parties': {}}, 'MOM': {'name': 'Moosomin-Montmartre', 'parties': {}}, 'PAC': {'name': 'Prince Albert Carlton', 'parties': {}}, 'PAN': {'name': 'Prince Albert Northcote', 'parties': {}}, 'RCP': {'name': 'Regina Coronation Park', 'parties': {}}, 'RDP': {'name': 'Regina Douglas Park', 'parties': {}}, 'REC': {'name': 'Regina Elphinstone-Centre', 'parties': {}}, 'RLK': {'name': 'Regina Lakeview', 'parties': {}}, 'RMR': {'name': 'Regina Mount Royal', 'parties': {}}, 'RNE': {'name': 'Regina Northeast', 'parties': {}}, 'RPQ': {'name': 'Regina Pasqua', 'parties': {}}, 'RRD': {'name': 'Regina Rochdale', 'parties': {}}, 'RSA': {'name': 'Regina South Albert', 'parties': {}}, 'RUN': {'name': 'Regina University', 'parties': {}}, 'RWA': {'name': 'Regina Walsh Acres', 'parties': {}}, 'RWP': {'name': 'Regina Wascana Plains', 'parties': {}}, 'RZD': {'name': 'Rosetown-Delisle', 'parties': {}}, 'SAR': {'name': 'Saskatchewan Rivers', 'parties': {}}, 'SCE': {'name': 'Saskatoon Centre', 'parties': {}}, 'SCM': {'name': 'Saskatoon Chief Mistawasis', 'parties': {}}, 'SCW': {'name': 'Saskatoon Churchill-Wildwood', 'parties': {}}, 'SEA': {'name': 'Saskatoon Eastview', 'parties': {}}, 'SFA': {'name': 'Saskatoon Fairview', 'parties': {}}, 'SME': {'name': 'Saskatoon Meewasin', 'parties': {}}, 'SNU': {'name': 'Saskatoon Nutana', 'parties': {}}, 'SRD': {'name': 'Saskatoon Riversdale', 'parties': {}}, 'SSI': {'name': 'Saskatoon Silverspring', 'parties': {}}, 'SSO': {'name': 'Saskatoon Southeast', 'parties': {}}, 'SST': {'name': 'Saskatoon Stonebridge', 'parties': {}}, 'SUS': {'name': 'Saskatoon University-Sutherland', 'parties': {}}, 'SWE': {'name': 'Saskatoon Westview', 'parties': {}}, 'SWI': {'name': 'Saskatoon Willowgrove', 'parties': {}}, 'SWT': {'name': 'Swift Current', 'parties': {}}, 'TBF': {'name': 'The Battlefords', 'parties': {}}, 'WAR': {'name': 'Warman', 'parties': {}}, 'WBG': {'name': 'Weyburn-Bengough', 'parties': {}}, 'WCQ': {'name': "White City-Qu'appelle", 'parties': {}}, 'WOR': {'name': 'Wood River', 'parties': {}}, 'YRK': {'name': 'Yorkton', 'parties': {}}, 'RZS': {'name': 'Rosthern-Shellbrook', 'parties': {}}}
+var regionConversion = {'Athabasca': 'ATH', 'Batoche': 'BAT', 'Cannington': 'CAN', 'Canora-Pelly': 'CNP', 'Carrot River Valley': 'CRV', 'Cumberland': 'CUB', 'Cut Knife-Turtleford': 'CUT', 'Cypress Hills': 'CYP', 'Dakota-Arm River': 'DAR', 'Estevan-Big Muddy': 'EBM', 'Humboldt-Watrous': 'HUW', 'Kelvington-Wadena': 'KEW', 'Kindersley-Biggar': 'KIB', 'Last Mountain-Touchwood': 'LAT', 'Lloydminster': 'LLD', 'Lumsden-Morse': 'LUM', 'Martensville-Blairmore': 'MAB', 'Meadow Lake': 'MEA', 'Melfort': 'MEL', 'Melville-Saltcoats': 'MES', 'Moose Jaw North': 'MJN', 'Moose Jaw Wakamow': 'MJW', 'Moosomin-Montmartre': 'MOM', 'Prince Albert Carlton': 'PAC', 'Prince Albert Northcote': 'PAN', 'Regina Coronation Park': 'RCP', 'Regina Douglas Park': 'RDP', 'Regina Elphinstone-Centre': 'REC', 'Regina Lakeview': 'RLK', 'Regina Mount Royal': 'RMR', 'Regina Northeast': 'RNE', 'Regina Pasqua': 'RPQ', 'Regina Rochdale': 'RRD', 'Regina South Albert': 'RSA', 'Regina University': 'RUN', 'Regina Walsh Acres': 'RWA', 'Regina Wascana Plains': 'RWP', 'Rosetown-Delisle': 'RZD', 'Saskatchewan Rivers': 'SAR', 'Saskatoon Centre': 'SCE', 'Saskatoon Chief Mistawasis': 'SCM', 'Saskatoon Churchill-Wildwood': 'SCW', 'Saskatoon Eastview': 'SEA', 'Saskatoon Fairview': 'SFA', 'Saskatoon Meewasin': 'SME', 'Saskatoon Nutana': 'SNU', 'Saskatoon Riversdale': 'SRD', 'Saskatoon Silverspring': 'SSI', 'Saskatoon Southeast': 'SSO', 'Saskatoon Stonebridge': 'SST', 'Saskatoon University-Sutherland': 'SUS', 'Saskatoon Westview': 'SWE', 'Saskatoon Willowgrove': 'SWI', 'Swift Current': 'SWT', 'The Battlefords': 'TBF', 'Warman': 'WAR', 'Weyburn-Bengough': 'WBG', "White City-Qu'appelle": 'WCQ', 'Wood River': 'WOR', 'Yorkton': 'YRK', 'Rosthern-Shellbrook': 'RZS'}
+var partyConversion = {"SP": "Saskatchewan Party", "NDP": "New Democratic Party", "BUF": "Buffalo Party", "SUP": "Saskatchewan Party", "IND": "Independent", "GRN": "Green Party", "PRG": "Progressive Party", "PC": "PC Party"}
+
+var electionResultsUrl = "https://canopy.cbc.ca/live/elections/prov/SK2024/all/"
 
 let locations = [];
 document.addEventListener("DOMContentLoaded", () => {
@@ -34,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             svgObject.addEventListener('mouseenter', updateRegionInfo);
             svgObject.addEventListener('mouseleave', clearRegionInfo);
         });
-        updateCounts();
+        startFetchingElectoralData(electionResultsUrl);
     });
 });
 
@@ -66,47 +70,80 @@ function updateCounts() {
         count.innerHTML = counts[party];
     })
 }
-//async function fetchElectoralData(url) {
-//    try {
-//        const response = await fetch(url);
-//        const csvData = await response.text();
-//        const parsedData = parseElectoralCSV(csvData);
-//        const winningParties = getTopPartyByDistrict(parsedData);
-//        for (const district in winningParties) {
-//            const winningParty = winningParties[district];
-//            recolorArea(district, winningParty);
-//        }
-//        updateCounts();
-//    } catch (error) {
-//        console.error('Error fetching electoral data:', error);
-//    }
-//}
-//function parseElectoralCSV(csv) {
-//    const lines = csv.trim().split('\n');
-//    const headers = lines[0].split(',');
-//
-//    const result = lines.slice(1).map(line => {
-//        const fields = line.split(',');
-//        regions[fields[0]]["parties"][fields[3]] = {
-//            "name": fields[3],
-//            "candidate": fields[2],
-//            "votes": fields[4],
-//        }
-//        return {
-//            district: fields[0],
-//            party: fields[3],
-//            votes: fields[4],
-//        };
-//    });
-//
-//    return result;
-//}
-//function startFetchingElectoralData(csvUrl) {
-//    fetchElectoralData(csvUrl  + "?" + makeid(10));
-//    setInterval(() => {
-//        fetchElectoralData(csvUrl  + "?" + makeid(10));
-//    }, 30000);
-//}
+async function fetchElectoralData(url) {
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const parsedData = parseElectoralData(data);
+        const winningParties = getTopPartyByDistrict(parsedData);
+        for (const district in winningParties) {
+            const winningParty = winningParties[district];
+            recolorArea(district, winningParty);
+        }
+        updateCounts();
+    } catch (error) {
+        console.error('Error fetching electoral data:', error);
+    }
+}
+function parseElectoralData(data) {
+    result = []
+    for (const idx in data.data.ridings) {
+        const regionData = data.data.ridings[idx];
+        regionName = regionData.englishName;
+        regionCode = regionConversion[regionName];
+        if (!regionCode) {
+            console.log(regionName);
+            continue
+        }
+        for (const pidx in regionData.parties) {
+            try {
+                partyData = regionData.parties[pidx];
+                partyName = partyConversion[partyData.partyCode];
+                regions[regionCode].parties[partyName] = {"name": partyName, "candidate": `${partyData.firstName} ${partyData.lastName}`, "votes": partyData.votes}
+                result.push({"district": regionCode, "party": partyName, "votes": partyData.votes})
+            } catch (error) {
+                console.error(error)
+            }
+        }
+    }
+    return result;
+}
+function getTopPartyByDistrict(parsedData) {
+    const topParties = {};
+
+    const partyMapping = {
+        "Saskatchewan Party": "SAS",
+        "Saskatchewan United Party": "UNI",
+        "New Democratic Party": "NDP",
+        "Buffalo Party": "BUF"
+    };
+
+    parsedData.forEach(entry => {
+        const { district, party, votes } = entry;
+        const voteCount = parseInt(votes, 10); // Convert votes to a number
+        const abbreviatedParty = partyMapping[party] || 'TBD';
+        if (!topParties[district] || voteCount > topParties[district].votes) {
+            if (!(voteCount == 0)) {
+                topParties[district] = { party: abbreviatedParty, votes: voteCount };
+            } else {
+                topParties[district] = { party: "TBD", votes: 0 };
+            }
+        }
+    });
+
+    const result = {};
+    for (const district in topParties) {
+        result[district] = topParties[district].party;
+    }
+
+    return result;
+}
+function startFetchingElectoralData(url) {
+    fetchElectoralData(url);
+    setInterval(() => {
+        fetchElectoralData(url);
+    }, 30000);
+}
 function updateRegionInfo(e) {
     const region = e.target.id.slice(0, 3);
     const regionInfo = document.getElementById("region-info");
