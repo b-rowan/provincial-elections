@@ -114,8 +114,8 @@ function getTopPartyByDistrict(parsedData) {
 
     const partyMapping = {
         "Progressive Conservative": "PC",
-        "New Democratic Party": "NDP",
-        "Liberal Party": "LIB",
+        "New Democrat": "NDP",
+        "Liberal": "LIB",
         "Green Party": "GRN",
     };
 
