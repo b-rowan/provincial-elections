@@ -13,8 +13,22 @@ var regions = {'8': {'name': 'Brampton Centre', 'parties': {}}, '97': {'name': '
 var regionConversion = {'Ajax': '1', 'Algoma-Manitoulin': '2', 'Aurora-Oak Ridges-Richmond Hill': '3', 'Barrie-Innisfil': '4', 'Barrie-Springwater-Oro-Medonte': '5', 'Bay of Quinte': '6', 'Beaches-East York': '7', 'Brampton Centre': '8', 'Brampton East': '9', 'Brampton North': '10', 'Brampton South': '11', 'Brampton West': '12', 'Brantford-Brant': '13', 'Bruce-Grey-Owen Sound': '14', 'Burlington': '15', 'Cambridge': '16', 'Carleton': '17', 'Chatham-Kent-Leamington': '18', 'Davenport': '19', 'Don Valley East': '20', 'Don Valley North': '21', 'Don Valley West': '22', 'Dufferin-Caledon': '23', 'Durham': '24', 'Eglinton-Lawrence': '25', 'Elgin-Middlesex-London': '26', 'Essex': '27', 'Etobicoke Centre': '28', 'Etobicoke-Lakeshore': '29', 'Etobicoke North': '30', 'Flamborough-Glanbrook': '31', 'Glengarry-Prescott-Russell': '32', 'Guelph': '33', 'Haldimand-Norfolk': '34', 'Haliburton-Kawartha Lakes-Brock': '35', 'Hamilton Centre': '36', 'Hamilton East-Stoney Creek': '37', 'Hamilton Mountain': '38', 'Hamilton West-Ancaster-Dundas': '39', 'Hastings-Lennox and Addington': '40', 'Humber River-Black Creek': '41', 'Huron-Bruce': '42', 'Kanata-Carleton': '43', 'Kenora-Rainy River': '44', 'King-Vaughan': '45', 'Kingston and the Islands': '46', 'Kitchener Centre': '47', 'Kitchener-Conestoga': '48', 'Kitchener South-Hespeler': '49', 'Lambton-Kent-Middlesex': '50', 'Lanark-Frontenac-Kingston': '51', 'Leeds-Grenville-Thousand Islands and Rideau Lakes': '52', 'London-Fanshawe': '53', 'London North Centre': '54', 'London West': '55', 'Markham-Stouffville': '56', 'Markham-Thornhill': '57', 'Markham-Unionville': '58', 'Milton': '59', 'Mississauga Centre': '60', 'Mississauga East-Cooksville': '61', 'Mississauga-Erin Mills': '62', 'Mississauga-Lakeshore': '63', 'Mississauga-Malton': '64', 'Mississauga-Streetsville': '65', 'Nepean': '66', 'Newmarket-Aurora': '67', 'Niagara Centre': '68', 'Niagara Falls': '69', 'Niagara West': '70', 'Nickel Belt': '71', 'Nipissing': '72', 'Northumberland-Peterborough South': '73', 'Oakville': '74', 'Oakville North—Burlington': '75', 'Orleans': '76', 'Oshawa': '77', 'Ottawa Centre': '78', 'Ottawa South': '79', 'Ottawa-Vanier': '80', 'Ottawa West-Nepean': '81', 'Oxford': '82', 'Parkdale-High Park': '83', 'Parry Sound-Muskoka': '84', 'Perth-Wellington': '85', 'Peterborough-Kawartha': '86', 'Pickering-Uxbridge': '87', 'Renfrew-Nipissing-Pembroke': '88', 'Richmond Hill': '89', 'St. Catharines': '90', 'Sarnia-Lambton': '91', 'Sault Ste. Marie': '92', 'Scarborough-Agincourt': '93', 'Scarborough Centre': '94', 'Scarborough-Guildwood': '95', 'Scarborough North': '96', 'Scarborough-Rouge Park': '97', 'Scarborough Southwest': '98', 'Simcoe-Grey': '99', 'Simcoe North': '100', 'Spadina-Fort York': '101', 'Stormont-Dundas-South Glengarry': '102', 'Sudbury': '103', 'Thornhill': '104', 'Thunder Bay-Atikokan': '105', 'Thunder Bay-Superior North': '106', 'Timiskaming-Cochrane': '107', 'Timmins': '108', 'Toronto Centre': '109', 'Toronto-Danforth': '110', "Toronto-St. Paul's": '111', 'University-Rosedale': '112', 'Vaughan-Woodbridge': '113', 'Waterloo': '114', 'Wellington-Halton Hills': '115', 'Whitby': '116', 'Willowdale': '117', 'Windsor-Tecumseh': '118', 'Windsor West': '119', 'York Centre': '120', 'York-Simcoe': '121', 'York South-Weston': '122', 'Kiiwetinoong': '123', 'Mushkegowuk-James Bay': '124'}
 var partyConversion = {'PC': 'Progressive Conservative', 'NDP': 'New Democrat', 'LIB': 'Liberal', 'GRN': 'Green', 'IND': 'Independent', 'NBP': 'New Blue Party of Ontario', 'ONP': 'Ontario Party', 'COM': 'Communist Party of Canada (Ontario)', 'NAP': 'None of the Above Direct Democracy Party', 'COR': 'Ontario Provincial Confederation of Regions Party', 'PPP': 'The Peoples Political Party', 'POP': 'Populist Party Ontario', 'CPO': 'Ontario Centrist Party', 'ERP': 'Electoral Reform Party', 'NOP': 'Northern Ontario Party', 'PPO': 'Progress Party Ontario', 'OPF': "People's Progressive Common Front of Ontario", 'FOC': 'Freedom of Choice, Peace & Justice Party', 'PBP': 'Public Benefit Party of Ontario', 'FR': 'Family Rights', 'OMP': 'Ontario Moderate Party', 'CNS': 'Consensus Ontario', 'OA': 'Ontario Alliance', 'FP': 'Freedom Party of Ontario', 'PSN': 'Party for People with Special Needs', 'CCP': "Canadians' Choice Party", 'SSE': 'Stop the New Sex-Ed Agenda', 'LTN': 'Ontario Libertarian Party'}
 
+const electionResultsUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://canopy.cbc.ca/live/elections/prov/ON2025/all');
 
-var electionResultsUrl = "https://canopy.cbc.ca/live/elections/prov/ON2025/all/"
+function makeid(length) {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < length) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+}
+
+
+// var electionResultsUrl = "https://canopy.cbc.ca/live/elections/prov/ON2025/all/"
 
 let locations = [];
 document.addEventListener("DOMContentLoaded", () => {
@@ -74,7 +88,7 @@ function updateCounts() {
 }
 async function fetchElectoralData(url) {
     try {
-        const response = await fetch(url);
+        const response = await fetch(electionResultsUrl  + "?" + makeid(10));
         const data = await response.json();
         const parsedData = parseElectoralData(data);
         const winningParties = getTopPartyByDistrict(parsedData);
